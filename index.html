@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bitcoin Mining & Telegram App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f6f8fa;}
+    header { background:#23272f; color:#fff; padding:20px 0; text-align:center;}
+    nav { background:#1b1f24; padding:10px 0; text-align:center; }
+    nav a { color:#fff; text-decoration:none; margin:0 15px; font-weight:bold;}
+    nav a:hover { text-decoration:underline;}
+    main { max-width:800px; margin:30px auto; background:#fff; padding:30px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+    h1,h2 { color:#23272f;}
+    footer { text-align:center; padding:16px; background:#23272f; color:#fff; margin-top:30px;}
+    .form-group { margin-bottom:15px;}
+    label { display:block; margin-bottom:6px; }
+    input, textarea { width:100%; padding:8px; border-radius:4px; border:1px solid #ccc; }
+    button { background:#0088cc; color:#fff; padding:10px 18px; border:none; border-radius:4px; cursor:pointer;}
+    button:hover { background:#005f99;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bitcoin Mining & Telegram App</h1>
+    <p>Discover the world of cryptocurrency and messaging technology</p>
+  </header>
+  <nav>
+    <a href="#home" onclick="showPage('home')">Home</a>
+    <a href="#mining" onclick="showPage('mining')">Bitcoin Mining</a>
+    <a href="#telegram" onclick="showPage('telegram')">Telegram App</a>
+    <a href="#contact" onclick="showPage('contact')">Contact</a>
+  </nav>
+  <main>
+    <section id="home" class="page">
+      <h2>Welcome</h2>
+      <p>Explore how Bitcoin mining works and how Telegram apps can empower communities and crypto enthusiasts.</p>
+    </section>
+    <section id="mining" class="page" style="display:none;">
+      <h2>What is Bitcoin Mining?</h2>
+      <p>Bitcoin mining is the process by which new bitcoins are created and transactions are verified on the blockchain. Miners use powerful computers to solve complex mathematical problems, securing the network and earning rewards.</p>
+      <ul>
+        <li><strong>Decentralized:</strong> No central authority controls the network.</li>
+        <li><strong>Rewards:</strong> Miners receive bitcoin as incentives.</li>
+        <li><strong>Energy Intensive:</strong> Requires significant electricity and hardware.</li>
+      </ul>
+    </section>
+    <section id="telegram" class="page" style="display:none;">
+      <h2>About Telegram App</h2>
+      <p>Telegram is a popular messaging platform known for its privacy, speed, and open API. Many crypto projects and mining communities use Telegram to connect, share updates, and build bots for automation.</p>
+      <ul>
+        <li><strong>Secure Chat:</strong> End-to-end encryption for privacy.</li>
+        <li><strong>Open API:</strong> Build custom bots and integrations.</li>
+        <li><strong>Crypto Communities:</strong> Join groups for mining tips, news, and collaboration.</li>
+      </ul>
+    </section>
+    <section id="contact" class="page" style="display:none;">
+      <h2>Contact Us</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" onclick="alert('Form submitted! (Demo purpose)'); return false;">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Bitcoin Mining & Telegram App | Powered by AI
+  </footer>
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(el => el.style.display = 'none');
+      document.getElementById(pageId).style.display = 'block';
+    }
+    // Show home by default
+    showPage('home');
+  </script>
+</body>
+</html>
